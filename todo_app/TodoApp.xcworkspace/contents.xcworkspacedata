@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Modules/Home/Home.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Modules/ServiceLocator/ServiceLocator.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:TodoApp/TodoApp.xcodeproj">
+   </FileRef>
+</Workspace>

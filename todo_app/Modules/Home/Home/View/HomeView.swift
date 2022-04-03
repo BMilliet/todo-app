@@ -1,17 +1,26 @@
 import Foundation
 import UIKit
+import Helper
+import ServiceLocator
 
 class HomeView: UIViewController {
     
-    private var viewModel: HomeViewModel?
+    private let viewModel: HomeViewModel
+    private lazy var log: Log? = ServiceLocator.shared.resolve()
     
-    init(viewModel: HomeViewModel?) {
+    private lazy var mainStack: UIStackView = {
+        let stack: UIStackView = UIStackView()
+        stack.axis = .vertical
+        return stack
+    }()
+    
+    init(viewModel: HomeViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-      fatalError("Init fail")
+        return nil
     }
     
     override func viewDidLoad() {
@@ -19,6 +28,6 @@ class HomeView: UIViewController {
         
         view.backgroundColor = .cyan
         
-        viewModel?.hi()
+        viewModel.hi()
     }
 }

@@ -29,6 +29,7 @@
 		C4CF83D627F380DF002A092E /* ServiceLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83DB27F380DF002A092E /* ServiceLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocatorTests.swift; sourceTree = "<group>"; };
 		C4CF83E627F38170002A092E /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		C4EE3B4327F71AC900699405 /* Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 				C4CF83D027F380DE002A092E /* ServiceLocator */,
 				C4CF83DA27F380DF002A092E /* ServiceLocatorTests */,
 				C4CF83CF27F380DE002A092E /* Products */,
+				C4EE3B4227F71AC900699405 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +85,14 @@
 				C4CF83DB27F380DF002A092E /* ServiceLocatorTests.swift */,
 			);
 			path = ServiceLocatorTests;
+			sourceTree = "<group>";
+		};
+		C4EE3B4227F71AC900699405 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C4EE3B4327F71AC900699405 /* Helper.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

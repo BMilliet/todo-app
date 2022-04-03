@@ -2,28 +2,25 @@ import Foundation
 import UIKit
 import HomeKit
 import ServiceLocator
+import Helper
 
 public class HomeCoordinator {
     private let navigator: UINavigationController
-    private let di: ServiceLocator = ServiceLocator()
+    private lazy var log: Log? = ServiceLocator.shared.resolve()
+    
+    private let homeViewModel: HomeViewModel = HomeViewModel()
+    private lazy var homeView: HomeView? = HomeView(viewModel: homeViewModel)
     
     public init(navigator: UINavigationController) {
         self.navigator = navigator
-        self.inject()
     }
     
     public func start() {
-        guard let view: HomeView = di.resolve() else {
-            debugPrint("Could not resolve HomeView")
+        guard let homeView = homeView else {
+            log?.print("[HomeCoordinator] => Could not resolve HomeView")
             return
         }
         
-        print("wow")
-        navigator.pushViewController(view, animated: true)
-    }
-    
-    public func inject() {
-        di.register(object: HomeViewModel())
-        di.register(object: HomeView(viewModel: di.resolve()))
+        navigator.pushViewController(homeView, animated: true)
     }
 }

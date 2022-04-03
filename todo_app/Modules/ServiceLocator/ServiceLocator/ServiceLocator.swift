@@ -2,8 +2,9 @@ import Foundation
 
 public final class ServiceLocator {
     private lazy var instances = [String: Any]()
+    public static let shared = ServiceLocator()
     
-    public init() {}
+    private init() {}
     
     public func resolve<T>() -> T? {
         let key = typeName(T.self)
@@ -11,14 +12,12 @@ public final class ServiceLocator {
         if let instance = instances[key] as? T {
             return instance
         } else {
-            debugPrint("[ServiceLocator] -> Could not resolve \(key)")
             return nil
         }
     }
     
     public func register<T>(object: T) {
         let key = typeName(T.self)
-        debugPrint("[ServiceLocator] -> registering: \(key)")
         self.instances[key] = object
     }
     

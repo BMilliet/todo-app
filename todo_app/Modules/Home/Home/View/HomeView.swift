@@ -2,19 +2,14 @@ import Foundation
 import UIKit
 import Helper
 import ServiceLocator
+import Components
 
 class HomeView: UIViewController {
     
     private var viewModel: HomeViewDelegate?
     private lazy var log: Log? = ServiceLocator.shared.resolve()
     
-    private lazy var mainStack: UIStackView = {
-        let stack: UIStackView = UIStackView()
-        stack.axis = .vertical
-        stack.backgroundColor = .cyan
-        stack.addArrangedSubview(UIView())
-        return stack
-    }()
+    private lazy var mainStack: ScrollStackView = ScrollStackView(spacing: 4)
     
     required init?(coder: NSCoder) { return nil }
     init() {
@@ -39,10 +34,14 @@ extension HomeView: HomeViewProtocol {
         item.set(title: title)
         item.set(date: date)
         item.backgroundColor = color
-        mainStack.addArrangedSubview(item)
+        mainStack.addView(view: item)
     }
     
     func set(delegate: HomeViewDelegate) {
         self.viewModel = delegate
+    }
+    
+    func extraSetups() {
+        self.view.backgroundColor = .white
     }
 }

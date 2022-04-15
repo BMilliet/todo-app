@@ -10,6 +10,8 @@
 		573B047728099FA500011EE2 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047628099FA500011EE2 /* HomeViewProtocol.swift */; };
 		573B047928099FB700011EE2 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */; };
 		573B047C2809A9C600011EE2 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047B2809A9C600011EE2 /* TodoItemView.swift */; };
+		573B04A72809B71500011EE2 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 573B04A62809B71500011EE2 /* Components.framework */; };
+		573B04A82809B71500011EE2 /* Components.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 573B04A62809B71500011EE2 /* Components.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4C56BE227F620D10041DEEF /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; };
 		C4C56BE327F620D10041DEEF /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4CF840027F38296002A092E /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CF83F727F38295002A092E /* Home.framework */; };
@@ -40,6 +42,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C4C56BE327F620D10041DEEF /* Helper.framework in Embed Frameworks */,
+				573B04A82809B71500011EE2 /* Components.framework in Embed Frameworks */,
 				C4CF841B27F3831A002A092E /* ServiceLocator.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -51,6 +54,7 @@
 		573B047628099FA500011EE2 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		573B047B2809A9C600011EE2 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
+		573B04A62809B71500011EE2 /* Components.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Components.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C56BE127F620D10041DEEF /* Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83F727F38295002A092E /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83FA27F38295002A092E /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C56BE227F620D10041DEEF /* Helper.framework in Frameworks */,
+				573B04A72809B71500011EE2 /* Components.framework in Frameworks */,
 				C4CF841A27F3831A002A092E /* ServiceLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +164,7 @@
 		C4CF841827F3831A002A092E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				573B04A62809B71500011EE2 /* Components.framework */,
 				C4C56BE127F620D10041DEEF /* Helper.framework */,
 				C4CF841927F3831A002A092E /* ServiceLocator.framework */,
 			);

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573B047728099FA500011EE2 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047628099FA500011EE2 /* HomeViewProtocol.swift */; };
+		573B047928099FB700011EE2 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */; };
 		C4C56BE227F620D10041DEEF /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; };
 		C4C56BE327F620D10041DEEF /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4CF840027F38296002A092E /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CF83F727F38295002A092E /* Home.framework */; };
@@ -45,6 +47,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		573B047628099FA500011EE2 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
+		573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
 		C4C56BE127F620D10041DEEF /* Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83F727F38295002A092E /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83FA27F38295002A092E /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CF841427F382F6002A092E /* HomeViewModel.swift */,
+				573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				C4CF841627F382FF002A092E /* HomeView.swift */,
+				573B047628099FA500011EE2 /* HomeViewProtocol.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				C4CF841727F382FF002A092E /* HomeView.swift in Sources */,
 				C4CF841327F382E8002A092E /* HomeCoordinator.swift in Sources */,
+				573B047928099FB700011EE2 /* HomeViewModelProtocol.swift in Sources */,
 				C4CF841527F382F6002A092E /* HomeViewModel.swift in Sources */,
+				573B047728099FA500011EE2 /* HomeViewProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

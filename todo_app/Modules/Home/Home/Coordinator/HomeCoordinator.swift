@@ -8,19 +8,18 @@ public class HomeCoordinator {
     private let navigator: UINavigationController
     private lazy var log: Log? = ServiceLocator.shared.resolve()
     
-    private let homeViewModel: HomeViewModel = HomeViewModel()
-    private lazy var homeView: HomeView? = HomeView(viewModel: homeViewModel)
+    private let homeViewModel: HomeViewModelProtocol & HomeViewDelegate = HomeViewModel()
+    private let homeView: HomeViewProtocol = HomeView()
     
     public init(navigator: UINavigationController) {
         self.navigator = navigator
     }
     
     public func start() {
-        guard let homeView = homeView else {
-            log?.print("[HomeCoordinator] => Could not resolve HomeView")
-            return
-        }
-        
+        homeViewModel.set(view: homeView)
+        homeView.set(delegate: homeViewModel)
         navigator.pushViewController(homeView, animated: true)
+        
+        homeViewModel.setBackgroundColor()
     }
 }

@@ -5,7 +5,7 @@ import ServiceLocator
 
 class HomeView: UIViewController {
     
-    private let viewModel: HomeViewModel
+    private var viewModel: HomeViewDelegate?
     private lazy var log: Log? = ServiceLocator.shared.resolve()
     
     private lazy var mainStack: UIStackView = {
@@ -14,20 +14,26 @@ class HomeView: UIViewController {
         return stack
     }()
     
-    init(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
+    required init?(coder: NSCoder) { return nil }
+    init() {
         super.init(nibName: nil, bundle: nil)
     }
-    
-    required init?(coder: NSCoder) {
-        return nil
+}
+
+extension HomeView: ViewCode {
+    func setSubviews() {
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        view.backgroundColor = .cyan
-        
-        viewModel.hi()
+    func setConstraints() {
+    }
+}
+
+extension HomeView: HomeViewProtocol {
+    func set(delegate: HomeViewDelegate) {
+        self.viewModel = delegate
+    }
+    
+    func setBackgroundColor() {
+        self.view.backgroundColor = .cyan
     }
 }

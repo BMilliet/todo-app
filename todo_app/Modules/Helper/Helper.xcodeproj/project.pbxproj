@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573B047328099F0000011EE2 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047228099F0000011EE2 /* UIView.swift */; };
+		573B047528099F3A00011EE2 /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047428099F3A00011EE2 /* ViewCode.swift */; };
 		C4C56BCE27F616A20041DEEF /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BC527F616A10041DEEF /* Helper.framework */; };
 		C4C56BD327F616A20041DEEF /* HelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C56BD227F616A20041DEEF /* HelperTests.swift */; };
 		C4C56BD427F616A20041DEEF /* Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = C4C56BC827F616A10041DEEF /* Helper.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		573B047228099F0000011EE2 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		573B047428099F3A00011EE2 /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		C4C56BC527F616A10041DEEF /* Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4C56BC827F616A10041DEEF /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
 		C4C56BCD27F616A20041DEEF /* HelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +74,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573B046F28099ECE00011EE2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C4C56BDF27F6182F0041DEEF /* Environment.swift */,
+				C4C56BDD27F617470041DEEF /* Log.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		573B047028099EE600011EE2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				573B047428099F3A00011EE2 /* ViewCode.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		573B047128099EED00011EE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				573B047228099F0000011EE2 /* UIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C4C56BBB27F616A10041DEEF = {
 			isa = PBXGroup;
 			children = (
@@ -92,9 +121,10 @@
 		C4C56BC727F616A10041DEEF /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				573B047128099EED00011EE2 /* Extensions */,
+				573B047028099EE600011EE2 /* Protocols */,
+				573B046F28099ECE00011EE2 /* Utils */,
 				C4C56BC827F616A10041DEEF /* Helper.h */,
-				C4C56BDD27F617470041DEEF /* Log.swift */,
-				C4C56BDF27F6182F0041DEEF /* Environment.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -227,7 +257,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4C56BDE27F617470041DEEF /* Log.swift in Sources */,
+				573B047328099F0000011EE2 /* UIView.swift in Sources */,
 				C4C56BE027F6182F0041DEEF /* Environment.swift in Sources */,
+				573B047528099F3A00011EE2 /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

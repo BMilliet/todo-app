@@ -20,6 +20,6 @@ public class HomeCoordinator {
         homeView.set(delegate: homeViewModel)
         navigator.pushViewController(homeView, animated: true)
         
-        homeViewModel.setBackgroundColor()
+        homeViewModel.addItems()
     }
 }

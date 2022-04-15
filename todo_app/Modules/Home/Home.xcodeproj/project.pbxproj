@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		573B047728099FA500011EE2 /* HomeViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047628099FA500011EE2 /* HomeViewProtocol.swift */; };
 		573B047928099FB700011EE2 /* HomeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */; };
+		573B047C2809A9C600011EE2 /* TodoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 573B047B2809A9C600011EE2 /* TodoItemView.swift */; };
 		C4C56BE227F620D10041DEEF /* Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; };
 		C4C56BE327F620D10041DEEF /* Helper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C4C56BE127F620D10041DEEF /* Helper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C4CF840027F38296002A092E /* Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4CF83F727F38295002A092E /* Home.framework */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		573B047628099FA500011EE2 /* HomeViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewProtocol.swift; sourceTree = "<group>"; };
 		573B047828099FB700011EE2 /* HomeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelProtocol.swift; sourceTree = "<group>"; };
+		573B047B2809A9C600011EE2 /* TodoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemView.swift; sourceTree = "<group>"; };
 		C4C56BE127F620D10041DEEF /* Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83F727F38295002A092E /* Home.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Home.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4CF83FA27F38295002A092E /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573B047A2809A99C00011EE2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				573B047B2809A9C600011EE2 /* TodoItemView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		C4CF83ED27F38295002A092E = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +149,7 @@
 		C4CF841127F382D3002A092E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				573B047A2809A99C00011EE2 /* Components */,
 				C4CF841627F382FF002A092E /* HomeView.swift */,
 				573B047628099FA500011EE2 /* HomeViewProtocol.swift */,
 			);
@@ -270,6 +281,7 @@
 				573B047928099FB700011EE2 /* HomeViewModelProtocol.swift in Sources */,
 				C4CF841527F382F6002A092E /* HomeViewModel.swift in Sources */,
 				573B047728099FA500011EE2 /* HomeViewProtocol.swift in Sources */,
+				573B047C2809A9C600011EE2 /* TodoItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

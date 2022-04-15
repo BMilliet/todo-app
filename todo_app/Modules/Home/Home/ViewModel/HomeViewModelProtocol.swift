@@ -1,6 +1,6 @@
 protocol HomeViewModelProtocol {
     func set(view: HomeViewProtocol)
-    func setBackgroundColor()
+    func addItems()
 }
 
 protocol HomeViewDelegate: AnyObject {

@@ -11,29 +11,38 @@ class HomeView: UIViewController {
     private lazy var mainStack: UIStackView = {
         let stack: UIStackView = UIStackView()
         stack.axis = .vertical
+        stack.backgroundColor = .cyan
+        stack.addArrangedSubview(UIView())
         return stack
     }()
     
     required init?(coder: NSCoder) { return nil }
     init() {
         super.init(nibName: nil, bundle: nil)
+        setupView()
     }
 }
 
 extension HomeView: ViewCode {
     func setSubviews() {
+        self.view.addSubview(mainStack)
     }
     
     func setConstraints() {
+        mainStack.setAnchorsEqual(to: self.view)
     }
 }
 
 extension HomeView: HomeViewProtocol {
-    func set(delegate: HomeViewDelegate) {
-        self.viewModel = delegate
+    func addItem(title: String, date: String, color: UIColor) {
+        let item: TodoItemView = TodoItemView()
+        item.set(title: title)
+        item.set(date: date)
+        item.backgroundColor = color
+        mainStack.addArrangedSubview(item)
     }
     
-    func setBackgroundColor() {
-        self.view.backgroundColor = .cyan
+    func set(delegate: HomeViewDelegate) {
+        self.viewModel = delegate
     }
 }

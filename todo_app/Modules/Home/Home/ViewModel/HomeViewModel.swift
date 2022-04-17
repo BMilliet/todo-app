@@ -11,12 +11,11 @@ extension HomeViewModel: HomeViewModelProtocol {
     }
     
     func addItems() {
-        view?.addItem(title: "item1", date: "10/10/2022", color: .cyan)
-        view?.addItem(title: "item2", date: "10/10/2022", color: .blue)
-        view?.addItem(title: "item3", date: "10/10/2022", color: .gray)
+        view?.addItems(newTodos: [
+            TodoItem(title: "item1", date: "10/10/2022"),
+            TodoItem(title: "item2", date: "10/10/2022")
+        ])
     }
 }
 
-extension HomeViewModel: HomeViewDelegate {
-    
-}
+extension HomeViewModel: HomeViewDelegate { }

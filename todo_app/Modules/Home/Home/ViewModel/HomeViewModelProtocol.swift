@@ -3,5 +3,4 @@ protocol HomeViewModelProtocol {
     func addItems()
 }
 
-protocol HomeViewDelegate: AnyObject {
-}
+protocol HomeViewDelegate: AnyObject { }

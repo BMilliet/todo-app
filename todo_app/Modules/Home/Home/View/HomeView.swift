@@ -8,8 +8,16 @@ class HomeView: UIViewController {
     
     private var viewModel: HomeViewDelegate?
     private lazy var log: Log? = ServiceLocator.shared.resolve()
+    private var todos: Array<TodoItem> = []
     
-    private lazy var mainStack: ScrollStackView = ScrollStackView(spacing: 4)
+    private lazy var table: UITableView = {
+        let table = UITableView(frame: .zero)
+        table.register(TodoViewCell.self, forCellReuseIdentifier: "cell")
+        table.delegate = self
+        table.dataSource = self
+        table.frame = view.bounds
+        return table
+    }()
     
     required init?(coder: NSCoder) { return nil }
     init() {
@@ -20,21 +28,18 @@ class HomeView: UIViewController {
 
 extension HomeView: ViewCode {
     func setSubviews() {
-        self.view.addSubview(mainStack)
+        self.view.addSubview(table)
     }
     
     func setConstraints() {
-        mainStack.setAnchorsEqual(to: self.view)
+        table.setAnchorsEqual(to: self.view)
     }
 }
 
 extension HomeView: HomeViewProtocol {
-    func addItem(title: String, date: String, color: UIColor) {
-        let item: TodoItemView = TodoItemView()
-        item.set(title: title)
-        item.set(date: date)
-        item.backgroundColor = color
-        mainStack.addView(view: item)
+    func addItems(newTodos: [TodoItem]) {
+        newTodos.forEach { todos.append($0) }
+        table.reloadData()
     }
     
     func set(delegate: HomeViewDelegate) {
@@ -43,5 +48,23 @@ extension HomeView: HomeViewProtocol {
     
     func extraSetups() {
         self.view.backgroundColor = .white
+    }
+}
+
+extension HomeView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.todos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell: UITableViewCell = self.table.dequeueReusableCell(withIdentifier: "cell") else {
+            return UITableViewCell(frame: .zero)
+        }
+        cell.textLabel?.text = self.todos[indexPath.row].title
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Tapped cell \(todos[indexPath.row].id)")
     }
 }
